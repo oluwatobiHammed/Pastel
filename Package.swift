@@ -4,18 +4,21 @@ import PackageDescription
 
 let package = Package(
     name: "Pastel",
+    platforms: [
+        .iOS(.v11)
+    ],
     products: [
         .library(
             name: "Pastel",
-            targets: ["Pastel"]
-        ),
+            targets: ["Pastel"]),
     ],
     targets: [
         .target(
             name: "Pastel",
-            dependencies: []),
+            path: "Pastel/Sources"),
         .testTarget(
             name: "PastelTests",
-            dependencies: ["Pastel"]),
+            dependencies: ["Pastel"],
+            path: "Pastel/Tests"),
     ]
 )
