@@ -15,10 +15,5 @@ let package = Package(
     targets: [
         .target(
             name: "Pastel",
-            path: "."),
-        .testTarget(
-            name: "Pastel",
-            dependencies: ["Pastel"],
-            path: "Pastel/Tests"),
-    ]
+            path: ".")    ]
 )
